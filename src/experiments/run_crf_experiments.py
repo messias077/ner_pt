@@ -4,9 +4,9 @@ import numpy as np
 from src.corpora.corpora_parser import read_corpus_file
 from src.nlp.nlp_parser import data_preprocessing, extract_ner
 from src.machine_learning.ml_utils import convert_data
-# from sklearn_crfsuite import CRF
-# from seqeval.metrics import classification_report
-# from src.utils.utils import dump_report, compute_direct_match
+from sklearn_crfsuite import CRF
+from seqeval.metrics import classification_report
+from src.utils.utils import dump_report, compute_direct_match
 
 
 if __name__ == '__main__':
@@ -87,45 +87,43 @@ if __name__ == '__main__':
 
     crf.fit(X_train, y_train)
 
-    # y_pred = crf.predict(X_test)
-    #
-    # dict_report = classification_report(y_test, y_pred,
-    #                                     output_dict=True)
-    #
-    # data_conll = ''
-    #
-    # for data, real_tags, pred_tags in \
-    #         zip(test_data, y_test, y_pred):
-    #     words = data[0]
-    #     sent = '\n'.join('{0} {1} {2}'
-    #                      .format(word, real_tag, pred_tag)
-    #                      for word, real_tag, pred_tag in
-    #                      zip(words, real_tags, pred_tags))
-    #     sent += '\n\n'
-    #     data_conll += sent
-    #
-    # print('\nReport:', dict_report)
-    #
-    # print('\nSaving the report in:', report_file)
-    #
-    # dump_report(dict_report, report_file)
-    #
-    # script_result_file = os.path.join(report_dir, corpus_name +
-    #                                   '_crf.tsv')
-    #
-    # with open(script_result_file, 'w', encoding='utf-8') as file:
-    #     file.write(data_conll)
-    #
-    # # Computing direct matching
-    #
-    # ner_ext_test = extract_ner(test_data_original[:, 0],
-    #                            test_data_original[:, 1],
-    #                            exclude=['O'], is_bio=True)
-    #
-    # ner_ext_pred = extract_ner(test_data_original[:, 0], y_pred,
-    #                            exclude=['O'], is_bio=True)
-    #
-    # direct_match = compute_direct_match(ner_ext_test, ner_ext_pred)
-    #
-    # print('\nDirect match:', direct_match)
-    #
+    y_pred = crf.predict(X_test)
+
+    dict_report = classification_report(y_test, y_pred, output_dict=True)
+
+    data_conll = ''
+
+    for data, real_tags, pred_tags in \
+            zip(test_data, y_test, y_pred):
+        words = data[0]
+        sent = '\n'.join('{0} {1} {2}'.format(word, real_tag, pred_tag)
+                         for word, real_tag, pred_tag in
+                         zip(words, real_tags, pred_tags))
+        sent += '\n\n'
+        data_conll += sent
+
+    print('\nReport:', dict_report)
+
+    print('\nSaving the report in:', report_file)
+
+    dump_report(dict_report, report_file)
+
+    script_result_file = os.path.join(report_dir, corpus_name +
+                                      '_crf.tsv')
+
+    with open(script_result_file, 'w', encoding='utf-8') as file:
+        file.write(data_conll)
+
+    # Computing direct matching
+
+    ner_ext_test = extract_ner(test_data_original[:, 0],
+                               test_data_original[:, 1],
+                               exclude=['O'], is_bio=True)
+
+    ner_ext_pred = extract_ner(test_data_original[:, 0], y_pred,
+                               exclude=['O'], is_bio=True)
+
+    direct_match = compute_direct_match(ner_ext_test, ner_ext_pred)
+
+    print('\nDirect match:', direct_match)
+
