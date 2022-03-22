@@ -11,6 +11,7 @@ Please cite [the following paper](https://link.springer.com/chapter/10.1007/978-
   author={Silva, M.G. and Oliveira, H.T.A.},
   booktitle = {{PROPOR} 2022, 14th International Conference on the Computational Processing of Portuguese},
   volume    = {13208},
+  pages     = {198--208},
   year      = {2022},
   publisher = {Springer}
 }
