@@ -5,7 +5,7 @@ Repository of paper "Combining Word Embeddings for Portuguese Named Entity Recog
 
 To run the scripts for this work, follow the steps below. All datasets will be available after cloning the project (git clone https://github.com/messias077/ner_en.git). Don't forget to create a python virtual environment and install the dependencies from the requirements.txt file!
 
-```python
+```
 # Preparing the corpus
 python le_ner_corpus_clean.py
 python split_clean_paramopama.py
