@@ -10,6 +10,9 @@ To run the scripts for this work, follow the steps below. All datasets will be a
 python le_ner_corpus_clean.py
 python split_clean_paramopama.py
 
+# Choosing a corpus name
+At the beginning of the script (python run_crf_experiments.py and/or python run_flair_experiments.py), uncomment the name of the corpus you want to use
+
 # Running the experiments
 python run_crf_experiments.py
 python run_flair_experiments.py
