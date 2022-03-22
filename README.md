@@ -16,7 +16,7 @@ python run_flair_experiments.py
 
 ```
 
-## Citing our work
+### Citing our work
 
 Please cite [the following paper](https://link.springer.com/chapter/10.1007/978-3-030-98305-5_19) when using this work:
 
@@ -31,4 +31,3 @@ Please cite [the following paper](https://link.springer.com/chapter/10.1007/978-
   publisher = {Springer}
 }
 ```
-
