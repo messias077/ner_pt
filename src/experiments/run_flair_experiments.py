@@ -13,8 +13,8 @@ if __name__ == '__main__':
 
     corpus_name = 'harem_selective'
     # corpus_name = 'harem_total'
-    # corpus_name = 'le_ner'
     # corpus_name = 'paramopama'
+    # corpus_name = 'le_ner'
 
     word2vec_skip_file = 'w2v_skip_s300.gensim'
     word2vec_cbow_file = 'w2v_cbow_s300.gensim'
