@@ -156,21 +156,19 @@ if __name__ == '__main__':
     if is_use_bert_base or is_use_bert_large:
         if is_use_bert_base:
             print('\nRunning using BERT Base')
-            bert_embedding = \
-                TransformerWordEmbeddings(bert_base_embedding_path,
-                                          allow_long_sentences=True)
+            bert_path = bert_base_embedding_path
         else:
             print('\nRunning using BERT Large')
-            bert_embedding = \
-                TransformerWordEmbeddings(bert_large_embedding_path,
-                                          allow_long_sentences=True)
+            bert_path = bert_large_embedding_path
+        bert_embedding = TransformerWordEmbeddings(
+            bert_path, layers='all', allow_long_sentences=True)
         bert_embedding.max_subtokens_sequence_length = 512
         bert_embedding.stride = 0
         embedding_types.append(bert_embedding)
 
     if is_use_elmo:
         print('\nRunning using Elmo')
-        elmo_embedding = ELMoEmbeddings('pt')
+        elmo_embedding = ELMoEmbeddings('pt', embedding_mode='all')
         embedding_types.append(elmo_embedding)
 
     embeddings = StackedEmbeddings(embeddings=embedding_types)
