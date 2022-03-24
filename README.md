@@ -3,7 +3,7 @@ Repository of paper "Combining Word Embeddings for Portuguese Named Entity Recog
 
 ### Example Usage
 
-To run the scripts for this work, follow the steps below. All datasets will be available after cloning the project (git clone https://github.com/messias077/ner_en.git). Don't forget to create a python virtual environment and install the dependencies from the requirements.txt file!
+To run the scripts for this work, follow the steps below. All datasets will be available after cloning the project (git clone https://github.com/messias077/ner_pt.git). Don't forget to create a python virtual environment and install the dependencies from the requirements.txt file!
 
 ```
 # Preparing the corpus
@@ -28,10 +28,11 @@ Please cite [the following paper](https://link.springer.com/chapter/10.1007/978-
   author={da Silva, Messias Gomes and de Oliveira, Hil{\'a}rio Tomaz Alves},
   title={Combining Word Embeddings for Portuguese Named Entity Recognition},
   booktitle = {Computational Processing of the Portuguese Language},
-  year      = {2022},
   volume    = {13208},
   pages     = {198--208},
+  year      = {2022},
   publisher = {Springer International Publishing},
+  address   = {Cham},
   isbn      = {978-3-030-98305-5}
 }
 ```
