@@ -18,7 +18,7 @@ if __name__ == '__main__':
 
     delimiter = '\t'
 
-    report_dir = '../../data/reports/'
+    report_dir = 'data/reports/'
 
     train_file = None
     test_file = None
@@ -26,20 +26,20 @@ if __name__ == '__main__':
     idx = 1
 
     if corpus_name == 'le_ner':
-        train_file = '../../data/corpora/le_ner/train_clean.conll'
-        test_file = '../../data/corpora/le_ner/test_clean.conll'
+        train_file = 'data/corpora/le_ner/train_clean.conll'
+        test_file = 'data/corpora/le_ner/test_clean.conll'
         delimiter = ' '
     elif corpus_name == 'paramopama':
-        train_file = '../../data/corpora/paramopama/train.txt'
-        test_file = '../../data/corpora/paramopama/test.txt'
+        train_file = 'data/corpora/paramopama/train.txt'
+        test_file = 'data/corpora/paramopama/test.txt'
     elif corpus_name == 'harem_total':
-        train_file = '../../data/corpora/harem/train_total.txt'
-        test_file = '../../data/corpora/harem/test_total.txt'
+        train_file = 'data/corpora/harem/train_total.txt'
+        test_file = 'data/corpora/harem/test_total.txt'
         delimiter = ' '
         idx = 3
     elif corpus_name == 'harem_selective':
-        train_file = '../../data/corpora/harem/train_selective.txt'
-        test_file = '../../data/corpora/harem/test_selective.txt'
+        train_file = 'data/corpora/harem/train_selective.txt'
+        test_file = 'data/corpora/harem/test_selective.txt'
         delimiter = ' '
         idx = 3
     else:

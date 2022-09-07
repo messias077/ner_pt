@@ -16,14 +16,16 @@ if __name__ == '__main__':
     # corpus_name = 'paramopama'
     # corpus_name = 'le_ner'
 
+    # Download at: http://nilc.icmc.usp.br/nilc/index.php/repositorio-de-word-embeddings-do-nilc
     word2vec_skip_file = 'w2v_skip_s300.gensim'
     word2vec_cbow_file = 'w2v_cbow_s300.gensim'
-
     glove_file = 'glove_s300.gensim'
 
+    # Download at: https://github.com/jneto04/ner-pt
     flair_forward_file = 'flairBBP_forward-pt.pt'
     flair_backward_file = 'flairBBP_backward-pt.pt'
 
+    # Automatic download
     bert_base_embedding_path = 'neuralmind/bert-base-portuguese-cased'
     bert_large_embedding_path = 'neuralmind/bert-large-portuguese-cased'
 
@@ -51,25 +53,25 @@ if __name__ == '__main__':
 
     if corpus_name == 'le_ner':
         columns = {0: 'token', 1: 'label'}
-        data_folder = '../../data/corpora/le_ner'
+        data_folder = 'data/corpora/le_ner'
         train_file = 'train_clean.conll'
         test_file = 'test_clean.conll'
         val_file = 'dev_clean.conll'
     elif corpus_name == 'paramopama':
         columns = {0: 'token', 1: 'label'}
-        data_folder = '../../data/corpora/paramopama'
+        data_folder = 'data/corpora/paramopama'
         train_file = 'train.txt'
         test_file = 'test.txt'
         val_file = 'validation.txt'
     elif corpus_name == 'harem_total':
         columns = {0: 'token', 1: 'pos', 2: 'sublabel', 3: 'label'}
-        data_folder = '../../data/corpora/harem'
+        data_folder = 'data/corpora/harem'
         train_file = 'train_total.txt'
         test_file = 'test_total.txt'
         val_file = 'dev_total.txt'
     elif corpus_name == 'harem_selective':
         columns = {0: 'token', 1: 'pos', 2: 'sublabel', 3: 'label'}
-        data_folder = '../../data/corpora/harem'
+        data_folder = 'data/corpora/harem'
         train_file = 'train_selective.txt'
         test_file = 'test_selective.txt'
         val_file = 'dev_selective.txt'
@@ -78,15 +80,15 @@ if __name__ == '__main__':
         exit(0)
 
     if is_use_flair:
-        model_dir = '../../data/models/flair'
+        model_dir = 'data/models/flair'
     elif is_use_bert_base:
-        model_dir = '../../data/models/bert_base'
+        model_dir = 'data/models/bert_base'
     elif is_use_bert_large:
-        model_dir = '../../data/models/bert_large'
+        model_dir = 'data/models/bert_large'
     elif is_use_elmo:
-        model_dir = '../../data/models/elmo'
+        model_dir = 'data/models/elmo'
     else:
-        model_dir = '../../data/models/bilstm'
+        model_dir = 'data/models/bilstm'
 
     if is_use_w2v_skip:
         model_dir += '_w2v_skip'

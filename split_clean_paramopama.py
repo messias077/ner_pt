@@ -7,11 +7,11 @@ from src.corpora.corpora_parser import read_corpus_file, generate_data,\
 
 if __name__ == '__main__':
 
-    corpus_file = '../../data/corpora/paramopama/bio_corpus_paramopama+second_harem.txt'
+    corpus_file = 'data/corpora/paramopama/bio_corpus_paramopama+second_harem.txt'
 
-    train_file = '../../data/corpora/paramopama/train.txt'
-    val_file = '../../data/corpora/paramopama/validation.txt'
-    test_file = '../../data/corpora/paramopama/test.txt'
+    train_file = 'data/corpora/paramopama/train.txt'
+    val_file = 'data/corpora/paramopama/validation.txt'
+    test_file = 'data/corpora/paramopama/test.txt'
 
     data = read_corpus_file(corpus_file, split_char='\t')
 

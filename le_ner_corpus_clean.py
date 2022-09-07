@@ -5,13 +5,13 @@ from src.corpora.corpora_parser import read_corpus_file, \
 
 if __name__ == '__main__':
 
-    corpus_file_dev = '../../data/corpora/le_ner/dev.conll'
-    corpus_file_test = '../../data/corpora/le_ner/test.conll'
-    corpus_file_train = '../../data/corpora/le_ner/train.conll'
+    corpus_file_dev = 'data/corpora/le_ner/dev.conll'
+    corpus_file_test = 'data/corpora/le_ner/test.conll'
+    corpus_file_train = 'data/corpora/le_ner/train.conll'
 
-    corpus_file_dev_clean = '../../data/corpora/le_ner/dev_clean.conll'
-    corpus_file_test_clean = '../../data/corpora/le_ner/test_clean.conll'
-    corpus_file_train_clean = '../../data/corpora/le_ner/train_clean.conll'
+    corpus_file_dev_clean = 'data/corpora/le_ner/dev_clean.conll'
+    corpus_file_test_clean = 'data/corpora/le_ner/test_clean.conll'
+    corpus_file_train_clean = 'data/corpora/le_ner/train_clean.conll'
 
     dev = read_corpus_file(corpus_file_dev, split_char=' ')
     test = read_corpus_file(corpus_file_test, split_char=' ')
