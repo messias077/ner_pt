@@ -12,7 +12,8 @@ python split_clean_paramopama.py
 
 # Choosing a corpus name
 At the beginning of the script (run_crf_experiments.py and/or run_flair_experiments.py), 
-uncomment the name of the corpus and embedding you want to use and don't forget to download the word embeddings files! 
+uncomment the name of the corpus and embedding you want to use and don't forget to download 
+the word embeddings files! 
 
 # Running the experiments
 python run_crf_experiments.py
