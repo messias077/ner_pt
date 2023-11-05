@@ -53,7 +53,7 @@ scipy==1.8.0
 segtok==1.5.11
 sentencepiece==0.1.95
 seqeval==1.2.2
-setuptools==44.0.0
+setuptools==65.5.1
 six==1.16.0
 sklearn-crfsuite==0.3.6
 smart-open==5.2.1
